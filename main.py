@@ -9,7 +9,7 @@ from telegram.constants import ParseMode
 client = genai.Client(api_key='AIzaSyBx-_j1iByYESGScCjHQ4EaHWlBaFwJmQA')
 TOKEN = '8081348686:AAFO_hjCrq_ZMw607cgjlDdbSfZ1xo6Cj3g'
 tasks = []
-
+import req
 class Prompt:
     update: Update
     context: ContextTypes.DEFAULT_TYPE
@@ -122,6 +122,7 @@ def main():
 
 if __name__=="__main__":
     main()
+
 
 
 
