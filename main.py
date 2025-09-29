@@ -9,7 +9,25 @@ from telegram.constants import ParseMode
 client = genai.Client(api_key='AIzaSyBx-_j1iByYESGScCjHQ4EaHWlBaFwJmQA')
 TOKEN = '8081348686:AAFO_hjCrq_ZMw607cgjlDdbSfZ1xo6Cj3g'
 tasks = []
+#========================
+
 import req
+#========== Flas App ===========
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return f"<p> TasseoBot Is Runing ...Time: {datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S")} </p>"
+
+def run_app():
+    app.run(port=6677,host='0.0.0.0')
+
+t = threading.Thread(target=run_app)
+t.daemon = True
+t.start()
+#=============================
 class Prompt:
     update: Update
     context: ContextTypes.DEFAULT_TYPE
@@ -122,6 +140,7 @@ def main():
 
 if __name__=="__main__":
     main()
+
 
 
 
