@@ -1,6 +1,6 @@
 import asyncio
 import os
-
+import threading
 from telegram import Update
 from telegram.ext import ApplicationBuilder,CommandHandler,MessageHandler, ContextTypes,filters
 from google import genai
@@ -140,6 +140,7 @@ def main():
 
 if __name__=="__main__":
     main()
+
 
 
 
