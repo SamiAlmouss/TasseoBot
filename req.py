@@ -1,7 +1,7 @@
 import requests
 import threading
 import time
-url0 = "https://TasseoBot.onrender.com/"
+url0 = "https://tasseobot.onrender.com/"
 def req():
     while True:
         try:
