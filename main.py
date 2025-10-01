@@ -1,4 +1,4 @@
-import asyncio
+8import asyncio
 import os
 import threading
 from telegram import Update
@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return f"<p> TasseoBot Is Runing ...Time: {datetime.datetime.now().strftime("%Y.%m.%d %H:%M:%S")} </p>"
+    return "<p> TasseoBot Is Runing ...</p>"
 
 def run_app():
     app.run(port=6979,host='0.0.0.0')
@@ -140,6 +140,7 @@ def main():
 
 if __name__=="__main__":
     main()
+
 
 
 
