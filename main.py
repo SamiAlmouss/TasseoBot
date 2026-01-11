@@ -11,8 +11,22 @@ TOKEN = '8081348686:AAFO_hjCrq_ZMw607cgjlDdbSfZ1xo6Cj3g'
 tasks = []
 #========================
 
+import req
 #========== Flas App ===========
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+    return "<p> TasseoBot Is Runing ...</p>"
+
+def run_app():
+    app.run(port=6979,host='0.0.0.0')
+
+t = threading.Thread(target=run_app)
+t.daemon = True
+t.start()
 #=============================
 class Prompt:
     update: Update
@@ -126,10 +140,3 @@ def main():
 
 if __name__=="__main__":
     main()
-
-
-
-
-
-
-
