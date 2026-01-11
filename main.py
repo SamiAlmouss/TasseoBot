@@ -6,12 +6,12 @@ from telegram.ext import ApplicationBuilder,CommandHandler,MessageHandler, Conte
 from google import genai
 from google.genai import types
 from telegram.constants import ParseMode
-client = genai.Client(api_key='AIzaSyBx-_j1iByYESGScCjHQ4EaHWlBaFwJmQA')
+client = genai.Client(api_key='AIzaSyDHH2rG9-8pPROl2RyGDjItKby2TByG8DM')
 TOKEN = '8081348686:AAFO_hjCrq_ZMw607cgjlDdbSfZ1xo6Cj3g'
 tasks = []
 #========================
 
-import req
+
 #========== Flas App ===========
 from flask import Flask
 
@@ -24,9 +24,6 @@ def hello_world():
 def run_app():
     app.run(port=6979,host='0.0.0.0')
 
-t = threading.Thread(target=run_app)
-t.daemon = True
-t.start()
 #=============================
 class Prompt:
     update: Update
@@ -140,3 +137,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
